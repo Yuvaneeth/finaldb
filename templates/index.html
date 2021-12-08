@@ -1,0 +1,500 @@
+<!-- FlatFy Theme - Andrea Galanti /-->
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Flatfy Free Flat and Responsive HTML5 Template ">
+    <meta name="author" content="">
+
+    <title>CS527 DBMS Project 1</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous"> -->
+
+    <!-- Custom Google Web Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@300&display=swap" rel="stylesheet">
+    <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.useso.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic'
+          rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom CSS-->
+    <link href="/static/css/general.css" rel="stylesheet">
+
+    <!-- Owl-Carousel -->
+    <link href="/static/css/custom.css" rel="stylesheet">
+    <link href="/static/css/owl.carousel.css" rel="stylesheet">
+    <link href="/static/css/owl.theme.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+    <link href="/static/css/animate.css" rel="stylesheet">
+
+    <!-- Magnific Popup core CSS file -->
+    <link rel="stylesheet" href="/static/css/magnific-popup.css">
+
+    <script src="/static/js/modernizr-2.6.2.min.js"></script>  <!-- Modernizr /-->
+    <script src="/static/js/PIE_IE9.js"></script>
+    <script src="/static/js/PIE_IE678.js"></script>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="opacity:0.9;padding:10px">
+        <a class="navbar-brand" href="#" style="font-family:Staatliches, cursive;" >CS527 Project</a>
+        <a class="navbar-brand" href="#" style="font-family:Staatliches, cursive; color: rgba(167, 43, 43, 0.699);" >Group 10</a>
+
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#NavbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"> -->
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+
+            
+          </div>
+        </div>
+      </nav>
+
+
+
+    <style>
+        /* @media (min-width: 768px) {
+          .navbar-collapse.collapse {
+            display: block !important;
+            height: auto !important;
+            padding-bottom: 0;
+            overflow: visible !important;
+          }
+          .navbar-collapse.in {
+            display: block !important;
+            height: auto !important;
+            padding-bottom: 0;
+            overflow: visible !important;
+          }
+        } */
+        $font-family:   "Roboto";
+        $font-size:     14px;
+        
+        $color-primary: #ABA194;
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: $font-family;
+            font-size: $font-size;
+            background-size: 200% 100% !important;
+            animation: move 10s ease infinite;
+            transform: translate3d(0, 0, 0);
+            background: linear-gradient(45deg, #49D49D 10%, #A2C7E5 90%);
+            height: 100vh
+        }
+        
+        .user {
+            width: 90%;
+            max-height: auto;
+            max-width: 1000px;
+            margin: 10vh auto;
+        }
+        
+        .user__header {
+            text-align: center;
+            opacity: 0;
+            transform: translate3d(0, 500px, 0);
+            animation: arrive 500ms ease-in-out 0.7s forwards;
+        }
+        
+        .user__title {
+            font-size: $font-size;
+            margin-bottom: -10px;
+            font-weight: 500;
+            color: white;
+        }
+        
+        .form {
+            margin-top: 40px;
+            border-radius: 6px;
+            overflow: hidden;
+            opacity: 0;
+            transform: translate3d(0, 500px, 0);
+            animation: arrive 500ms ease-in-out 0.9s forwards;
+        }
+        
+        .form--no {
+            animation: NO 1s ease-in-out;
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+        
+        .form__input {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            font-family: $font-family;
+            -webkit-appearance: none;
+            border: 0;
+            outline: 0;
+            transition: 0.3s;
+            
+            &:focus {
+                background: darken(#fff, 3%);
+            }
+        }
+        
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            font-family: $font-family;
+            -webkit-appearance: none;
+            outline: 0;
+            border: 0;
+            color: white;
+            background: $color-primary;
+            transition: 0.3s;
+            
+            &:hover {
+                background: darken($color-primary, 5%);
+            }
+        }
+        
+        @keyframes NO {
+          from, to {
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+          }
+        
+          10%, 30%, 50%, 70%, 90% {
+            -webkit-transform: translate3d(-10px, 0, 0);
+            transform: translate3d(-10px, 0, 0);
+          }
+        
+          20%, 40%, 60%, 80% {
+            -webkit-transform: translate3d(10px, 0, 0);
+            transform: translate3d(10px, 0, 0);
+          }
+        }
+        
+        @keyframes arrive {
+            0% {
+                opacity: 0;
+                transform: translate3d(0, 50px, 0);
+            }
+            
+            100% {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        
+        @keyframes move {
+            0% {
+                background-position: 0 0
+            }
+        
+            50% {
+                background-position: 100% 0
+            }
+        
+            100% {
+                background-position: 0 0
+            }
+        }
+              </style>
+        
+        
+        <script>const button = document.querySelector('.btn')
+          const form   = document.querySelector('.form')
+          
+          button.addEventListener('click', function() {
+             form.classList.add('form--no') 
+          });</script>
+    <style type="text/css">
+        
+        @import url("/static/css/style1.css");
+        
+    </style>
+    <!--[if lt IE 9]>
+            <script src="js/html5shiv.js"></script>
+        <![endif]-->
+
+    <script>
+        function clearCache() {
+            var table = document.getElementById("rounded-corner");
+            var child1 = document.getElementById("tbhead");
+            var child2 = document.getElementById("tbmain");
+            table.removeChild(child1);
+            table.removeChild(child2);
+            document.getElementById("time_elapsed").innerHTML = "";
+        }
+
+        function Reset() {
+            document.getElementById("finish").addEventListener("click", function () {
+                document.getElementById("reset").click();
+                clearCache();
+                // location.reload();
+                // location.href = "/";
+            });
+        }
+    </script>
+
+    <script src="/static/js/myScript.js"></script>
+    
+</head>
+
+<body id="home">
+
+
+<!-- Preloader -->
+<div id="preloader">
+    <div id="status"></div>
+</div>
+
+<!-- FullScreen -->
+
+
+
+
+
+<!-- Contact -->
+<div id="contact" class="content-section-a">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-6 col-md-offset-3 text-center wrap_title">
+                <h4>Query Customization:</h4>
+            </div>
+
+            <form role="form" action="" method="post" id="form1">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="form-group text-center">
+                        <label for="InputName">Select DBMS of your choice:</label>
+                        <div class="input-group">
+                            <input type="text" style="width: 555px;border-radius: 0%;" class="form-control" list="InputList" name="InputName" id="InputName"
+                                   placeholder="'mysql' or 'redshift' or 'mongodb'" onblur="populateDatabases(this.value)" required>
+                                   <!-- <select type="text" class="form-control"  name="InputName" id="InputName"
+                                    required> -->
+                            <datalist id="InputList" >
+                                <option label="Redshift" value="redshift"/>
+                                <option label="MySQL" value="mysql"/>
+                                <option label="MongoDB" value="mongodb"/>
+                            </datalist>
+                            <!-- </select> -->
+                        </div>
+                    </div>
+                    <div class="form-group text-center">
+                        <label for="databases">Select Database of your choice:</label>
+                        <div class="input-group">
+                            <input type="text" style="width: 555px;border-radius: 0%;" class="form-control" list="InputDatabases" name="InputDatabase" id="InputDatabase"
+                                   placeholder="select database name" required>
+                                   <!-- <select type="text" class="form-control"  name="InputName" id="InputName"
+                                    required> -->
+                            <datalist id="InputDatabases">
+                                <!-- <option label="Redshift" value="redshift"/>
+                                <option label="MySQL" value="mysql"/>
+                                <option label="MongoDB" value="mongodb"/> -->
+                            </datalist>
+                            <!-- </select> -->
+                        </div>
+                    </div>
+
+                    <!-- <div>
+                        <P>Select DB: </P><select id="db_selector" >
+                            <script>
+
+                            </script>
+                            <option label="Redshift" value="redshift"/>
+                            <option label="MySQL" value="mysql"/>
+                            <option label="MongoDB" value="mongodb"/>
+                        </select>
+                    </div> -->
+
+                    <div class="form-group text-center">
+                        <label for="InputMessage">Query</label>
+                        <div class="input-group" style="position: center;">
+                                <textarea name="InputMessage" id="InputMessage" style="width: 555px;border-radius: 0%;" class="form-control"
+                                          placeholder="Write your query.." rows="5" required></textarea>
+                            
+                        </div>
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+    Launch ER Diagram
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" style="max-width: 2000;">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Only available E-R Diagram: <link href="../static/img/er.png">INSTACART:</link></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img style="max-height: 500px;max-width:550px;"  src="../static/img/er.png"/>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal" >Close</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="modal-body">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4 ml-auto">.col-md-4 .ml-auto</div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 ml-auto">.col-md-3 .ml-auto</div>
+        <div class="col-md-2 ml-auto">.col-md-2 .ml-auto</div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 ml-auto">.col-md-6 .ml-auto</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-9">
+          Level 1: .col-sm-9
+          <div class="row">
+            <div class="col-8 col-sm-6">
+              Level 2: .col-8 .col-sm-6
+            </div>
+            <div class="col-4 col-sm-6">
+              Level 2: .col-4 .col-sm-6
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+
+<!-- 
+  <div class="modal-body">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4 ml-auto">.col-md-4 .ml-auto</div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 ml-auto">.col-md-3 .ml-auto</div>
+        <div class="col-md-2 ml-auto">.col-md-2 .ml-auto</div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 ml-auto">.col-md-6 .ml-auto</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-9">
+          Level 1: .col-sm-9
+          <div class="row">
+            <div class="col-8 col-sm-6">
+              Level 2: .col-8 .col-sm-6
+            </div>
+            <div class="col-4 col-sm-6">
+              Level 2: .col-4 .col-sm-6
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+                    </div>
+                    <button type="button" name="submit" id="submit" onclick="displayData()"
+                            class="btn wow tada btn-embossed btn-primary pull-right">Submit
+                    </button>
+                    <br>
+                    <input type="reset" style="background-color: red;" name="reset" id="reset" value="Reset"
+                           class="btn wow tada btn-embossed btn-primary pull-left">
+                </div>
+            </form>
+            <hr class="featurette-divider hidden-lg">
+        </div>
+    </div>
+</div>
+
+<div id="whatis" class="content-section-b" style="border-top: 0">
+    <div class="container">
+
+       
+
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="form-group text-center">
+                    <label for="time_elapsed" style="width: 555px;text-align: center;">Time Elapsed</label>
+                    <div class="input-group" style="align-items: center;">
+                        
+                                  <p class="form-group text-center" style="width:555px;text-align: center;" id="time_elapsed"></p>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-md-offset-3">
+                <button type="button" style="background-color: red; align-items: center;" name="finish" id="finish" onclick="Reset()"
+                        class="btn wow tada btn-embossed btn-primary center-block">Finish
+                </button>
+            </div>
+        </div>
+<div>
+        <div style="height: 500px;overflow: auto;" class="col-md-6 col-md-offset-3" >
+            <table  id="rounded-corner" summary="2007 Major IT Companies' Profit">
+                
+                
+                {#                <thead id="tbhead">#}
+                {#                </thead>#}
+                {#                <tfoot>#}
+                {#                </tfoot>#}
+                {#                <tbody id="tbmain">#}
+                {#                </tbody>#}
+            </table>
+        </div>
+</div>
+    </div>
+</div>
+
+<!-- JavaScript -->
+<script src="/static/js/jquery-1.10.2.js"></script>
+<script src="/static/js/bootstrap.js"></script>
+<script src="/static/js/owl.carousel.js"></script>
+<script src="/static/js/script.js"></script>
+<!-- StikyMenu -->
+<script src="/static/js/stickUp.min.js"></script>
+<script type="text/javascript">
+    jQuery(function ($) {
+        $(document).ready(function () {
+            $('.navbar-default').stickUp();
+
+        });
+    });
+
+</script>
+<!-- Smoothscroll -->
+<script type="text/javascript" src="/static/js/jquery.corner.js"></script>
+<script src="/static/js/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
+<script src="/static/js/classie.js"></script>
+<script src="/static/js/uiMorphingButton_inflow.js"></script>
+<!-- Magnific Popup core JS file -->
+<script src="/static/js/jquery.magnific-popup.js"></script>
+</body>
+
+</html>
